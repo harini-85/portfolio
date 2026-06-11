@@ -66,8 +66,7 @@ export default function Certifications() {
               className={`glass-strong rounded-2xl overflow-hidden border ${cert.border} transition-all hover:shadow-xl cursor-default`}
             >
               {/* Header */}
-              <div className={`bg-gradient-to-br ${cert.bg} p-6 flex items-center justify-between`}>
-                <div className="text-4xl">{cert.badge}</div>
+              <div className={`bg-gradient-to-br ${cert.bg} p-6 flex items-center justify-end`}>
                 <div className={`w-12 h-12 rounded-full glass flex items-center justify-center ${cert.color}`}>
                   <cert.icon size={22} />
                 </div>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
-  FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub,
+  FaPython, FaJava, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub,
 } from 'react-icons/fa';
 import { SiMysql, SiPandas, SiNumpy, SiScikitlearn, SiJupyter, SiGooglecolab } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
