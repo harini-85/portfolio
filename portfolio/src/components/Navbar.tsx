@@ -42,10 +42,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold gradient-text cursor-pointer"
+            className="cursor-pointer"
             onClick={() => handleClick('#home')}
           >
-            &lt;/&gt;
+            <span className="text-white font-light tracking-widest text-sm uppercase">Nethi</span>
+            <span className="gradient-text font-bold tracking-wider text-sm uppercase ml-1.5">Harini</span>
           </motion.span>
 
           {/* Desktop nav */}

@@ -26,7 +26,10 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
           {/* Brand */}
           {/* <div className="text-center sm:text-left">
-            <p className="text-xl font-bold gradient-text">&lt;/&gt;</p>
+            <p>
+              <span className="text-white font-light tracking-widest text-sm uppercase">Nethi</span>
+              <span className="gradient-text font-bold tracking-wider text-sm uppercase ml-1.5">Harini</span>
+            </p>
             <p className="text-gray-500 text-xs mt-1">Full Stack · ML · Data Science</p>
           </div> */}
 
