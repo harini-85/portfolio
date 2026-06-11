@@ -45,7 +45,7 @@ export default function Navbar() {
             className="text-xl font-bold gradient-text cursor-pointer"
             onClick={() => handleClick('#home')}
           >
-            NH.dev
+            Nethi Harini
           </motion.span>
 
           {/* Desktop nav */}
