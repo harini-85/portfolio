@@ -9,7 +9,7 @@ const projects = [
     description:
       'AI-powered healthcare platform with symptom classification using TF-IDF and Logistic Regression. Features JWT authentication, role-based access, geolocation-based doctor discovery, and automated model retraining.',
     tech: ['FastAPI', 'Next.js', 'Machine Learning', 'JWT', 'MySQL', 'TF-IDF'],
-    github: 'https://github.com/harini-85',
+    github: 'https://github.com/harini-85/smart-medical-appointment-platform',
     demo: '',
     gradient: 'from-purple-600/20 to-blue-600/20',
     border: 'border-purple-500/30',
@@ -21,7 +21,7 @@ const projects = [
     description:
       'Full-stack application for agricultural supply businesses featuring inventory tracking, customer management, credit sales tracking, and automated low-stock alerts.',
     tech: ['Node.js', 'Express.js', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/harini-85',
+    github: 'https://github.com/harini-85/inventory-management-system.git',
     demo: '',
     gradient: 'from-blue-600/20 to-cyan-600/20',
     border: 'border-blue-500/30',
@@ -41,12 +41,13 @@ const projects = [
   //   tagColor: 'text-orange-400 bg-orange-500/10',
   // },
 
+  
   {
     title: 'Facial Emotion Recognition',
     description:
       'Machine Learning project for recognizing human emotions from facial expressions using deep learning techniques and computer vision with OpenCV preprocessing pipeline.',
     tech: ['Python', 'OpenCV', 'Machine Learning', 'Deep Learning'],
-    github: 'https://github.com/harini-85',
+    github: 'https://github.com/harini-85/facial-emotion-recognition',
     demo: '',
     gradient: 'from-pink-600/20 to-rose-600/20',
     border: 'border-pink-500/30',
@@ -54,17 +55,29 @@ const projects = [
     tagColor: 'text-pink-400 bg-pink-500/10',
   },
   {
-    title: 'EV Charging Station Optimization',
+    title: 'Multi-Cloud Resource Right-Sizing & Cost Optimization System',
     description:
-      'Data-driven project identifying optimal EV charging station locations using geospatial analytics, demand forecasting, and interactive data visualization dashboards.',
-    tech: ['Python', 'Pandas', 'Data Analysis', 'Matplotlib', 'Visualization'],
-    github: 'https://github.com/harini-85',
+      'Intelligent multi-cloud VM right-sizing system using XGBoost trained on 150K instances. Supports real-time AWS/Azure/GCP metric collection and CSV-based offline analysis. Classifies VMs as Undersized, Oversized, Optimal, or Zombie with up to 40% cost savings, Gemini-powered explanations, and exportable PDF reports.',
+    tech: ['XGBoost', 'Python', 'AWS', 'Azure', 'GCP', 'Machine Learning', 'Gemini AI'],
+    github: 'https://github.com/harini-85/cloud-resource-optimizer.git',
     demo: '',
-    gradient: 'from-green-600/20 to-teal-600/20',
-    border: 'border-green-500/30',
-    tag: 'Data Science',
-    tagColor: 'text-green-400 bg-green-500/10',
+    gradient: 'from-sky-600/20 to-indigo-600/20',
+    border: 'border-sky-500/30',
+    tag: 'Cloud / ML',
+    tagColor: 'text-sky-400 bg-sky-500/10',
   },
+  // {
+  //   title: 'EV Charging Station Optimization',
+  //   description:
+  //     'Data-driven project identifying optimal EV charging station locations using geospatial analytics, demand forecasting, and interactive data visualization dashboards.',
+  //   tech: ['Python', 'Pandas', 'Data Analysis', 'Matplotlib', 'Visualization'],
+  //   github: 'https://github.com/harini-85/EV-Charging-Location-Optimization',
+  //   demo: '',
+  //   gradient: 'from-green-600/20 to-teal-600/20',
+  //   border: 'border-green-500/30',
+  //   tag: 'Data Science',
+  //   tagColor: 'text-green-400 bg-green-500/10',
+  // },
 ];
 
 function ProjectCard({ project, index, inView }: {
