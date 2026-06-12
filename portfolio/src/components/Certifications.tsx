@@ -1,37 +1,48 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaJava, FaPython, FaCode, FaAward, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaAward, FaExternalLinkAlt } from 'react-icons/fa';
+// import { FaJava, FaPython, FaCode, FaAward, FaExternalLinkAlt } from 'react-icons/fa';
 
 const certs = [
   {
     title: 'Oracle Java Programming',
     issuer: 'Oracle',
-    icon: FaJava,
     color: 'text-orange-400',
     bg: 'from-orange-600/20 to-red-600/20',
     border: 'border-orange-500/30',
-    year: '2024',
-    link: 'https://still-rain-602.linkyhost.com',
+    link: 'https://drive.google.com/file/d/1kJ2_0P6E_ifJElDyFyBD55clDMceSnNi/view?usp=sharing',
   },
   {
     title: 'Python Essentials I',
     issuer: 'Cisco Networking Academy',
-    icon: FaPython,
     color: 'text-blue-400',
     bg: 'from-blue-600/20 to-cyan-600/20',
     border: 'border-blue-500/30',
-    year: '2024',
     link: 'https://www.credly.com/badges/41f375c4-d6c6-4758-a158-0e572a136c3e',
   },
   {
     title: 'Data Structures & Algorithms',
     issuer: 'Smart Interviews',
-    icon: FaCode,
     color: 'text-purple-400',
     bg: 'from-purple-600/20 to-violet-600/20',
     border: 'border-purple-500/30',
-    year: '2024',
     link: 'https://smartinterviews.in/certificate/4cfe4c43',
+  },
+  {
+    title: 'Agentforce Specialist',
+    issuer: 'Salesforce',
+    color: 'text-sky-400',
+    bg: 'from-sky-600/20 to-blue-600/20',
+    border: 'border-sky-500/30',
+    link: 'https://drive.google.com/file/d/1Gju2i8xknFZ4ifnvQbr11y_Ctt1eAW50/view?usp=sharing',
+  },
+  {
+    title: 'Frontend Development with JavaScript',
+    issuer: 'TASK',
+    color: 'text-yellow-400',
+    bg: 'from-yellow-600/20 to-amber-600/20',
+    border: 'border-yellow-500/30',
+    link: 'https://drive.google.com/file/d/1J9weGEScqAjHCT-jb195AMnkHnUVV5ZF/view?usp=sharing',
   },
 ];
 
@@ -55,7 +66,7 @@ export default function Certifications() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certs.map((cert, i) => (
             <motion.div
               key={cert.title}
@@ -68,7 +79,7 @@ export default function Certifications() {
               {/* Header */}
               <div className={`bg-gradient-to-br ${cert.bg} p-6 flex items-center justify-end`}>
                 <div className={`w-12 h-12 rounded-full glass flex items-center justify-center ${cert.color}`}>
-                  <cert.icon size={22} />
+                  <FaAward size={22} />
                 </div>
               </div>
 
@@ -79,8 +90,7 @@ export default function Certifications() {
                   <FaAward className="text-yellow-400 mt-0.5 shrink-0" size={14} />
                 </div>
                 <p className="text-gray-400 text-xs mb-4">{cert.issuer}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-600 bg-white/5 px-2 py-1 rounded-md">{cert.year}</span>
+                <div className="flex items-center justify-end">
                   {cert.link ? (
                     <a
                       href={cert.link}
