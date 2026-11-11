@@ -17,6 +17,18 @@ const projects = [
     tagColor: 'text-purple-400 bg-purple-500/10',
   },
   {
+    title: 'TradeBridge - AI-Powered Export Decision Platform',
+    description:
+      'Full-stack export decision-support platform for Indian SMEs, integrating HS code classification, regulatory compliance analysis, and ML-based export destination ranking. Features AI-assisted product classification, a hybrid RAG-based system for retrieving trade regulations, and an XGBoost ranking model to identify suitable export markets using historical trade and economic data.',
+    tech: ['Java', 'Python', 'React.js', 'Spring Boot', 'MySQL', 'XGBoost', 'Scikit-learn', 'RAG'],
+    github: 'https://github.com/harini-85/tradebridge.git',
+    demo: '',
+    gradient: 'from-emerald-600/20 to-teal-600/20',
+    border: 'border-emerald-500/30',
+    tag: 'AI / Trade',
+    tagColor: 'text-emerald-400 bg-emerald-500/10',
+  },
+  {
     title: 'Inventory & Business Management System',
     description:
       'Full-stack application for agricultural supply businesses featuring inventory tracking, customer management, credit sales tracking, and automated low-stock alerts.',

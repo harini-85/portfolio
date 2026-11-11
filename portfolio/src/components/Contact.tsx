@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
-  FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaCopy, FaCheck, FaPaperPlane,
+  FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaCopy, FaCheck, // FaPaperPlane,
 } from 'react-icons/fa';
 
 const contactInfo = [
@@ -43,9 +43,9 @@ const contactInfo = [
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
   const [copied, setCopied] = useState<string | null>(null);
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
+  // const [form, setForm] = useState({ name: '', email: '', message: '' });
+  // const [sent, setSent] = useState(false);
+  // const [sending, setSending] = useState(false);
 
   const copyToClipboard = (text: string, key: string) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -54,16 +54,16 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      setSent(true);
-      setForm({ name: '', email: '', message: '' });
-      setTimeout(() => setSent(false), 4000);
-    }, 1500);
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setSending(true);
+  //   setTimeout(() => {
+  //     setSending(false);
+  //     setSent(true);
+  //     setForm({ name: '', email: '', message: '' });
+  //     setTimeout(() => setSent(false), 4000);
+  //   }, 1500);
+  // };
 
   return (
     <section id="contact" ref={ref} className="py-24 px-4 relative overflow-hidden">
@@ -85,7 +85,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -133,7 +133,7 @@ export default function Contact() {
             ))}
           </motion.div>
 
-          {/* Contact form */}
+          {/* Contact form — commented out, keep for future use
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -198,6 +198,7 @@ export default function Contact() {
               </motion.button>
             </form>
           </motion.div>
+          */}
         </div>
       </div>
     </section>
