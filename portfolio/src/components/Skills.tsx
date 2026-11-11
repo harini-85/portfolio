@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import {
   FaPython, FaJava, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub,
 } from 'react-icons/fa';
-import { SiMysql, SiPandas, SiNumpy, SiScikitlearn, SiJupyter, SiGooglecolab } from 'react-icons/si';
+import { SiMysql, SiMongodb, SiPostgresql, SiPandas, SiNumpy, SiScikitlearn, SiJupyter, SiGooglecolab } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
 import { FiZap } from 'react-icons/fi';
 
@@ -27,6 +27,7 @@ const skillGroups = [
       { name: 'CSS', icon: FaCss3Alt, color: '#3B82F6', level: 88 },
       { name: 'Node.js', icon: FaNodeJs, color: '#22C55E', level: 78 },
       { name: 'Express.js', icon: FiZap, color: '#A855F7', level: 75 },
+      { name: 'Spring Boot', icon: FaJava, color: '#6DB33F', level: 80 },
     ],
   },
   {
@@ -35,6 +36,8 @@ const skillGroups = [
     borderColor: 'border-green-500/30',
     skills: [
       { name: 'MySQL', icon: SiMysql, color: '#00758F', level: 83 },
+      { name: 'MongoDB', icon: SiMongodb, color: '#47A248', level: 80 },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', level: 78 },
     ],
   },
   {
@@ -75,23 +78,10 @@ function SkillBar({ name, icon: Icon, color, level, inView, delay }: {
       initial={{ opacity: 0, x: -20 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.5, delay }}
-      className="group"
+      className="flex items-center gap-3 py-1 px-3 rounded-lg bg-white/5 border border-white/10 group hover:bg-white/10 transition-all"
     >
-      <div className="flex items-center justify-between mb-1.5">
-        <div className="flex items-center gap-2">
-          <Icon size={16} color={color} />
-          <span className="text-sm text-gray-300 font-medium">{name}</span>
-        </div>
-        <span className="text-xs text-gray-500">{level}%</span>
-      </div>
-      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1, delay: delay + 0.2, ease: 'easeOut' }}
-          className="h-full rounded-full bg-gradient-to-r from-purple-600 to-blue-500"
-        />
-      </div>
+      <Icon size={18} color={color} />
+      <span className="text-sm text-gray-300 font-medium">{name}</span>
     </motion.div>
   );
 }
