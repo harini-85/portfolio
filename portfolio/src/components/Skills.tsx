@@ -65,11 +65,10 @@ const skillGroups = [
   },
 ];
 
-function SkillBar({ name, icon: Icon, color, level, inView, delay }: {
+function SkillBar({ name, icon: Icon, color, inView, delay }: {
   name: string;
   icon: React.ElementType;
   color: string;
-  level: number;
   inView: boolean;
   delay: number;
 }) {
