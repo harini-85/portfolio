@@ -44,6 +44,14 @@ const certs = [
     border: 'border-yellow-500/30',
     link: 'https://drive.google.com/file/d/1J9weGEScqAjHCT-jb195AMnkHnUVV5ZF/view?usp=sharing',
   },
+  {
+    title: 'Microsoft Certified: SQL AI Developer Associate',
+    issuer: 'Microsoft',
+    color: 'text-teal-400',
+    bg: 'from-teal-600/20 to-emerald-600/20',
+    border: 'border-teal-500/30',
+    link: 'https://drive.google.com/file/d/14tdPIPsW0Cc36441_GNWqKXerY0_7ncC/view?usp=drivesdk',
+  },
 ];
 
 export default function Certifications() {
